@@ -1,0 +1,22 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.16"
+getrandom = { version = "0.2.15", features = ["custom"] }
+rand_chacha = { version = "0.3.1" }
+ic-cdk-timers = "0.10.0"
+
+
+alloy = { git = "https://github.com/ic-alloy/ic-alloy.git", tag = "v0.3.5-icp.0", default-features = false, features = [
+  "icp",
+  "sol-types",
+  "json",
+  "contract",
+] }
